@@ -84,3 +84,25 @@ function addPragraph(){
    para.textContent="jaavaScript is single threaded language";
    document.body.appendChild(para);
 }
+function appendMessage(){
+    const msg=document.createElement('p');
+    msg.textContent="welcome to the world of DOM";
+    document.body.appendChild(msg);
+}
+
+function addParagraph() {
+    const para = document.createElement('p');
+    para.textContent = 'JavaScript is single threaded!';
+
+    appendNewMessage();
+    document.body.appendChild(para);
+}
+
+function appendNewMessage() {
+    const para = document.createElement('p');
+
+    para.textContent = "Isn't that cool?";
+    document.body.appendChild(para);
+}
+
+addParagraph();
