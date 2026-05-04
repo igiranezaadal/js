@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="num">Enter a number to return circular Prime</label><br>
+    <input type="number" id="num">
+    <button id="submit">Submit</button>
+    <div id="ans"></div>
+
+    <script>
+        const enteredNum = document.getElementById("num");
+        const done = document.getElementById("submit");
+        const display = document.getElementById("ans");
+
+        done.addEventListener("click", function () {
+            let num = Number(enteredNum.value);
+            if (num < 100 || num > 10000) {
+                display.textContent = "The number should be between 100 and 10,000";
+                return;
+            }
+
+            function prime(n) {
+                if (n <= 1) {
+                    return false;
+                }
+                for (let i = 2; i < n; i++) {
+                    if (n % i === 0) {
+                        return false;
+                    }
+                }
+                return true;
+            }
+
+            if (!prime(num)) { 
+                display.textContent = "Is not a prime number";
+                return;
+            }
+
+            let arr = num.toString().split("");
+            for ( let j = 0; j<arr.length; j++){
+                console.log(arr.join(""));
+                let first = arr.shift();
+                arr.push(first);
+
+
+
+                if (!prime(Number)) { 
+                    display.textContent = "Not a circular Prime";
+                    return;
+                }
+                display.textContent = "Is a circular Prime";
+
+            }});
+    </script>
+</body>
+
+</html>
+</html>

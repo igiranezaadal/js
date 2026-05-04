@@ -35,14 +35,14 @@
 // }
 function pramidPattern(n) {
   let c=1;
-  for (let i = 1; i <= n; i++) {
+  for (let i = 1; i <= n; i+=2) {
     let row = '';
     for (let j = 1; j <= n - i; j++) {
       row += '  '; // Add spaces for alignment
     }
     for (let j = 1; j <= i; j++) {
       
-      row += '  '+c+' ';
+      row += '  '+c;
       c+=2;
     }
     console.log(row);
