@@ -48,24 +48,51 @@ const cheetah = {
     fact: 'Cheetahs have “tear marks” that run from the inside corners of their eyes down to the outside edges of their mouth.'
 };
 
-// creates an animal trading card
-function createAnimalTradingCardHTML(animal) {
-    const cardHTML = '<div class="card">
-        <h3 class="name">${animal.name}</h3>
-        <img src="${animal.name}.jpg" alt="${animal.name}" class="picture">
-        <div class="description">
-            <p class="fact">${animal.fact}</p>
-            <ul class="details">
-                <li><span class="bold">Scientific Name</span>: ${animal.scientificName}</li>
-                <li><span class="bold">Average Lifespan</span>: ${animal.lifespan}</li>
-                <li><span class="bold">Average Speed</span>: ${animal.speed}</li>
-                <li><span class="bold">Diet</span>: ${animal.diet}</li>
-            </ul>
-            <p class="brief">${animal.summary}</p>
-        </div>
-    </div>';
+// // creates an animal trading card
+// function createAnimalTradingCardHTML(animal) {
+//     const cardHTML = '<div class="card">
+//         <h3 class="name">${animal.name}</h3>
+//         <img src="${animal.name}.jpg" alt="${animal.name}" class="picture">
+//         <div class="description">
+//             <p class="fact">${animal.fact}</p>
+//             <ul class="details">
+//                 <li><span class="bold">Scientific Name</span>: ${animal.scientificName}</li>
+//                 <li><span class="bold">Average Lifespan</span>: ${animal.lifespan}</li>
+//                 <li><span class="bold">Average Speed</span>: ${animal.speed}</li>
+//                 <li><span class="bold">Diet</span>: ${animal.diet}</li>
+//             </ul>
+//             <p class="brief">${animal.summary}</p>
+//         </div>
+//     </div>';
 
-    return cardHTML;
+//     return cardHTML;
+// }
+
+// console.log(createAnimalTradingCardHTML(cheetah));
+
+
+
+
+// function diamond(n){
+// for
+// //   if(n%2===0 || n<1 || n===0)
+// //   return 'null';
+// for(let i=0; i<n; i++){
+//   console.log('*');
+//       if (n==1){
+//       }
+// }
+// }
+
+
+function rentalCarCost(d) {
+  // Your solution here
+  let total=d*40;
+  if(d>=7){
+    total-=50;
+  }else if(d>=3){
+    total-=20;
+  }
+  return `$${total}`;
 }
-
-console.log(createAnimalTradingCardHTML(cheetah));
+console.log(rentalCarCost(3));
