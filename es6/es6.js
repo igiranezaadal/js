@@ -268,9 +268,25 @@
 // console.log(obj.someBodyParent())
 
 
-const games=newSet(['Super Mario Bros.','Banjo-Kazooie','Mario Kart','Super Mario Bros.']);
+// const games=new Set(['Super Mario Bros.','Banjo-Kazooie','Mario Kart','Super Mario Bros.']);
+// console.log(games);
 
-games.add('Banjo-Tooie');
-games.add('Age of Empires');
-games.delete('Super Mario Bros.');
-console.log(games);
+// games.add('Banjo-Tooie');
+// games.add('Age of Empires');
+// games.delete('Super Mario Bros.');
+// console.log(games);
+// console.log(games.size + "\n");//sho size, numbers of element
+// console.log(games.values());//retrive all values
+// console.log(games.has("Mario Kart")) //Checking If An Item Exists
+
+
+const mySet = new Set(['a', 'b', 'c']);
+
+const valuesIterator = mySet.values();       // Set Iterator of values
+const entriesIterator = mySet.entries();     // Set Iterator of [value, value] pairs
+const defaultIterator = mySet[Symbol.iterator](); // Default iterator
+
+
+
+
+
