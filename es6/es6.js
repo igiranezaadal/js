@@ -280,13 +280,44 @@
 // console.log(games.has("Mario Kart")) //Checking If An Item Exists
 
 
-const mySet = new Set(['a', 'b', 'c']);
 
-const valuesIterator = mySet.values();       // Set Iterator of values
-const entriesIterator = mySet.entries();     // Set Iterator of [value, value] pairs
-const defaultIterator = mySet[Symbol.iterator](); // Default iterator
-
-
+// const mySet = new Set(['a', 'b', 'c']);
+// const valuesIterator = mySet.values();       // Set Iterator of values
+// const entriesIterator = mySet.entries();     // Set Iterator of [value, value] pairs
+// const defaultIterator = mySet[Symbol.iterator](); // Default iterator
 
 
+// const games=new Set(['Super Mario Bros.','Banjo-Kazooie','Mario Kart','Super Mario Bros.']);
+// const itelato=games.values();
+
+// itelato.next();
+// itelato.next();
+// itelato.next();
+// itelato.next();
+
+const mySet = new Set();
+mySet.add("0");
+mySet.add(1);
+mySet.add({});
+
+for (const v of mySet) {
+  console.log(v);
+}
+
+// console.log("Start small. Ship something.");
+const mySet = new Set();
+mySet.add("0");
+mySet.add(1);
+mySet.add({},3);
+mySet.add("prime adal")
+
+const setIter = mySet[Symbol.iterator]();
+
+// console.log(setIter.next().value); // "0"
+// console.log(setIter.next().value); // 1
+// console.log(setIter.next().value); // {}
+// console.log(setIter.next().value)
+for(const i of setIter){
+console.log(i)
+}
 
