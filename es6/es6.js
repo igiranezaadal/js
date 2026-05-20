@@ -251,7 +251,7 @@
 // }
 // class Child extends Parent{
 //   constructor(name,title,thirdProp){
-//     super(name,title);
+//     // super(name,title);
 //     this.thirdProp=thirdProp
 //   }
 //   someChildMethod(){
@@ -295,29 +295,38 @@
 // itelato.next();
 // itelato.next();
 
-const mySet = new Set();
-mySet.add("0");
-mySet.add(1);
-mySet.add({});
+// const mySet = new Set();
+// mySet.add("0");
+// mySet.add(1);
+// mySet.add({});
 
-for (const v of mySet) {
-  console.log(v);
-}
+// for (const v of mySet) {
+//   console.log(v);
+// }
 
 // console.log("Start small. Ship something.");
-const mySet = new Set();
-mySet.add("0");
-mySet.add(1);
-mySet.add({},3);
-mySet.add("prime adal")
+// const mySet = new Set();
+// mySet.add("0");
+// mySet.add(1);
+// mySet.add({},3);
+// mySet.add("prime adal")
 
-const setIter = mySet[Symbol.iterator]();
+// const setIter = mySet[Symbol.iterator]();
 
 // console.log(setIter.next().value); // "0"
 // console.log(setIter.next().value); // 1
 // console.log(setIter.next().value); // {}
 // console.log(setIter.next().value)
-for(const i of setIter){
-console.log(i)
-}
+// for(const i of setIter){
+// console.log(i)
+// }
 
+const person={
+      name:'mosh',
+      walk(){},
+      talk(){}
+}
+person.talk();
+person['name']='mosh';
+const targetmember= 'name';
+person[targetmember.value]='johny';
