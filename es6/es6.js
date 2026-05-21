@@ -321,12 +321,69 @@
 // console.log(i)
 // }
 
-const person={
-      name:'mosh',
-      walk(){},
-      talk(){}
-}
-person.talk();
-person['name']='mosh';
-const targetmember= 'name';
-person[targetmember.value]='johny';
+// const person={
+//       name:'mosh',
+//       walk(){},
+//       talk(){}
+// }
+// person.talk();
+// person['name']='mosh';
+// const targetmember= 'name';
+// person[targetmember.value]='johny';
+
+
+// const colors=new Set(['red','orange','yellow','green','blue','violet','brown','black']);
+// for(const i of colors){
+// console.log(i);
+// }
+
+
+// //WeakSet conatians only object, cant be looped over
+// let student1={name:"adal" ,age:67 ,gender:"M"}
+// let student2={name:"prince" ,age:18 ,gender:"M"}
+// let student3={name:"princess" ,age:76 ,gender:"F"}
+// const listOfStudents = new WeakSet([student1 ,student2 ,student3]);
+// console.log(listOfStudents);
+
+
+/*
+ * Programming Quiz: Using Sets (3-2)
+ *
+ * Create the following variables:
+ *     - uniqueFlavors and set it to a new WeakSet object
+ *     - flavor1 and set it equal to `{ flavor: 'chocolate' }`
+ *     - flavor2 and set it equal to an object with property 'flavor' and value of your choice!
+ *
+ * Use the `.add()` method to add the objects `flavor1` and `flavor2` to `uniqueFlavors`
+ * Use the `.add()` method to add the `flavor1` object (again!) to the `uniqueFlavors` set
+ */
+// const uniqueFlavors=new WeakSet({});
+// uniqueFlavors.add()
+// const flavor1=new set();
+
+
+// const employees =new Map();
+// employees.set('james.parkes@udacity.com', { 
+//     firstName: 'James',
+//     lastName: 'Parkes',
+//     role: 'Content Developer' 
+// });
+// employees.set('Evelyn', 75.68);
+// console.log(employees);
+
+// employees.delete('julia@udacity.com');
+// console.log(employees);
+
+// employees.clear()
+// console.log(employees);
+
+// console.log(members.has('Evelyn'));// has or contains data
+// console.log(members.get('Evelyn'));//retrive data
+
+
+// const myPromises=new Promise((resolve,reject)=>{
+//     const success=true;
+//     if(success)
+//         resolve("operation successfull");
+//         reject("operation failed");
+// });
