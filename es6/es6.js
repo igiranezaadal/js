@@ -387,3 +387,17 @@
 //         resolve("operation successfull");
 //         reject("operation failed");
 // });
+
+
+
+if (!String.prototype.startsWith) {
+  String.prototype.startsWith = function (searchString, position) {
+    position = position || 0;
+    return this.substr(position, searchString.length) === searchString;
+  };
+
+}
+'udacity'.startsWith('Udac')
+'udacity'.startsWith('Udac',2)
+'udacity'.startsWith('es6')
+

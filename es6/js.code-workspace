@@ -1,0 +1,32 @@
+{
+	"folders": [
+		{
+			"path": "../js"
+		},
+		{
+			"path": "."
+		},
+		{
+			"path": "../fundamentals"
+		},
+		{
+			"path": "../myProject"
+		},
+		{
+			"path": "../test"
+		},
+		{
+			"path": "../turt"
+		},
+		{
+			"path": "../.git"
+		},
+		{
+			"path": "../3 calculum"
+		},
+		{
+			"path": "../dom"
+		}
+	],
+	"settings": {}
+}
