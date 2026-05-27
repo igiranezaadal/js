@@ -33,19 +33,21 @@
 
 
 
-function findUnique(numbers) {
-  let num;
-    // Return the unique number
+// function findUnique(numbers) {
+//   let num;
+//     // Return the unique number
   
-  numbers.split('').sort((a,b)=>a-b);
-  for(let i=0;i<numbers.length;i++){
+//   numbers.split('').sort((a,b)=>a-b);
+//   for(let i=0;i<numbers.length;i++){
     
-  }
-  return num
-}
+//   }
+//   return num
+// }
 
-findUnique([1, 8, 4, 4, 6, 1, 8])
-findUnique([ 1234567 ])
-findUnique([ 1, 4, 4, 5, 5, 3, 3, 2, 2 ])
-findUnique([ 2, 2, 5, 5, 4, 3, 3, 1, 1 ])
-findUnique([ 3, 5, 5, 4, 4, 3, 2, 2, 9 ])
+// findUnique([1, 8, 4, 4, 6, 1, 8])
+// findUnique([ 1234567 ])
+// findUnique([ 1, 4, 4, 5, 5, 3, 3, 2, 2 ])
+// findUnique([ 2, 2, 5, 5, 4, 3, 3, 1, 1 ])
+// findUnique([ 3, 5, 5, 4, 4, 3, 2, 2, 9 ])
+
+// Write a function that takes an array of objects, where each object has an id and a name property. The function should return a new object where the keys are the id values and the values are the corresponding name values.
