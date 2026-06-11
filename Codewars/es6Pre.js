@@ -77,19 +77,19 @@
 // - Use for of loop, Set, and destructuring
 
 // Write a function `createReport(orders)` that returns:
-const orders= [
-  { customer:"Ali", product:"Laptop" },
-  { customer:"Sara", product:"Mouse" },
-  { customer:"Ali", product:"Laptop" },
-  { customer:"John", product:"Keyboard" },
-  { customer:"Sara", product:"Mouse" },
-  { customer:"Ali", product:"Monitor" }
-];
+// const orders= [
+//   { customer:"Ali", product:"Laptop" },
+//   { customer:"Sara", product:"Mouse" },
+//   { customer:"Ali", product:"Laptop" },
+//   { customer:"John", product:"Keyboard" },
+//   { customer:"Sara", product:"Mouse" },
+//   { customer:"Ali", product:"Monitor" }
+// ];
 
-for(let c of orders){
-    let values=orders.push([orders.product])
-}
-console.log(values);
-67 changes
+// for(let c of orders){
+//     let values=orders.push([orders.product])
+// }
+// console.log(values);
+// 67 changes
 
 
