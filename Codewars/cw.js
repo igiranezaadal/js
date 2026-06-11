@@ -50,4 +50,8 @@
 // findUnique([ 2, 2, 5, 5, 4, 3, 3, 1, 1 ])
 // findUnique([ 3, 5, 5, 4, 4, 3, 2, 2, 9 ])
 
-// Write a function that takes an array of objects, where each object has an id and a name property. The function should return a new object where the keys are the id values and the values are the corresponding name values.
+// Write a function that takes an array of objects, where each object has an id and a name property. 
+// The function should return a new object where the keys are the id values and the values are the corresponding name values.
+
+
+
