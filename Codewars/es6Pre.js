@@ -1,3 +1,5 @@
+
+
 // #### 2.Create a function that take 2 arrays and merge them
 // You are given:
 // ```jsx
@@ -88,5 +90,6 @@ for(let c of orders){
     let values=orders.push([orders.product])
 }
 console.log(values);
+67 changes
 
 
