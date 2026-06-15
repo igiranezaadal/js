@@ -403,3 +403,49 @@
 
 
 
+
+function restOpAdd(...numbers){
+      return numbers.reduce((tot,num)=>tot+num,0)
+}
+function mult(...numbers){
+      return
+}
+
+mark=[1,2,3]
+console.log(restOpAdd(...mark));
+
+
+
+
+// function groupStudentsByCourse(studentArray) {
+//   const courseMap = new Map();
+
+//   for (const { name, grade, courses } of studentArray) {
+//     // We only want students with a grade of 70 or above
+//     if (grade >= 70) {
+//       for (const course of courses) {
+//         // If the course doesn't exist in the map yet, initialize it with an empty array
+//         if (!courseMap.has(course)) {
+//           courseMap.set(course, []);
+//         }
+//         // Push the student's name into the course's array
+//         courseMap.get(course).push(name);
+//       }
+//     }
+//   }
+
+//   return courseMap;
+// }
+
+// // Test Data
+// const students = [
+//   { name: "Alice", grade: 85, courses: ["Math", "Science"] },
+//   { name: "Bob", grade: 65, courses: ["Math"] },
+//   { name: "Charlie", grade: 90, courses: ["Science"] },
+//   { name: "David", grade: 75, courses: ["Math"] }
+// ];
+
+// console.log(groupStudentsByCourse(students));
+
+
+
