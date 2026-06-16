@@ -91,3 +91,8 @@
 // }
 // console.log(values);
 // 67 changes
+
+function negative(num){
+    return (-num)
+}
+console.log(negative(45));
