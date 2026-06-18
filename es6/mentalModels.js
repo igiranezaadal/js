@@ -55,6 +55,6 @@ function transformToObject(users) {
   }                               //in the first element in the array and repeat for all the elements
 
   return result;
-
+}
 //js program to check for prime number given by the users
 // js programm to print fibonacci serries of number, range is given by the user

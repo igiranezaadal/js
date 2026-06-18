@@ -1,0 +1,13 @@
+*{
+    margin: 0px;
+    padding: 0px;     
+    /* background-color: hwb(0 70% 30%); */
+}
+
+p {
+
+    font-size: x-large;
+}
+div {
+    padding: 20px;
+}
