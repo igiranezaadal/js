@@ -424,12 +424,12 @@
 
 
 
-// remove2ndElementFromArray = function() {
-//   arr.splice(3);
-//   return arr;
-// };
-// var arr = ['I', 'am', 'a', 'developer'];
-// console.log(remove2ndElementFromArray(arr));
+remove2ndElementFromArray = function() {
+  arr.splice(2,5);// Remove the second element (index 1) from the array
+  return arr;
+};
+var arr = ['I', 'am', 'a', 'developer'];
+console.log(remove2ndElementFromArray(arr));
 
 
 
@@ -454,26 +454,6 @@
 // }
 // console.log(oddOrEven("0"));
 
-
-
-// function findprimeNumbers(num) {
-//   let primeNumbers = [];
-//   for (let i = 2; i <= num.length; i++) {
-//     let isPrime = true;
-//     for (let j = 2; j < i; j++) {
-//       if (i % j === 0) {
-//         isPrime = false;
-//         break;
-//       }
-//     }
-//     if (isPrime) {
-//       primeNumbers.push(i);
-//     } 
-//   }
-//   return primeNumbers;
-// }
-// console.log(findprimeNumbers([10, 15, 20, 30]));
-// problems
  
 
 
@@ -536,12 +516,14 @@
 
 
 
-function findUniqueNumbers(arr) {
-  let uniqueNumbers = [];
-  for (let i = 0; i < arr.length; i++) {
-    if (uniqueNumbers.indexOf(arr[i]) === -1) {
-      uniqueNumbers.push(arr[i]);
-    }
-  }
-  return uniqueNumbers;
-}
+// function findUniqueNumbers(arr) {
+//   let uniqueNumbers = [];
+//   for (let i = 0; i < arr.length; i++) {
+//     if (uniqueNumbers.indexOf(arr[i]) === -1) {//explanation: The indexOf() method is used to check if the current element arr[i] is already present in the uniqueNumbers array. If it returns -1, it means the element is not found in the uniqueNumbers array, indicating that it is unique.
+//       uniqueNumbers.push(arr[i]);
+//     }
+//   }
+//   return uniqueNumbers;
+// }
+// const arr = [1, 2, 3, 2,4,4, 4, 67, 1];
+// console.log(findUniqueNumbers(arr));
