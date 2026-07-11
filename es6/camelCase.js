@@ -14,18 +14,21 @@ function toCamelCase(str){
       res.push(upper)
       change=false;
     }
-    if(i=='_' || i==' '){
+    else if(i=='_' || i==' ' || i=='-'){
     change=true
     }
-    else if (typeof(i)==!''){
+    // else if (typeof(i)==!''){
+    //   res.push(i)
+    // }
+    else{
       res.push(i)
     }
-  
-    
   }
-  return res
+  res1=res.join('')
+  return res1
   }
-console.log(toCamelCase('"the_stealth_warrior"'))
+
+console.log(toCamelCase('the_stealth_warrior'))
 console.log(toCamelCase('The-Stealth-Warrior'))
 console.log(toCamelCase('A-B-C'))
 console.log(toCamelCase('a_dl a'))
