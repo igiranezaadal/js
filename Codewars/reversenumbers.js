@@ -18,5 +18,4 @@ console.log(digitize(35231));
 //   }
 //   return newArray;
 // }
-// console.log(digitize(35231));
 console.log(digitize(0));
