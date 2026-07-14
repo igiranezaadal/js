@@ -26,3 +26,5 @@ console.log(sc([[]]))
 //   console.log('gg undefined')
 // }
 // else console.log(' errors')
+const hello=new Set();
+console.log(typeof(hello))
