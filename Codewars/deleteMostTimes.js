@@ -7,7 +7,7 @@
 //   } mine
 // }
 
-// Elumine
+// Elu
 function sc(arr){
   let obj = {};
   // let flat = arr.flat(Infinity);
@@ -17,7 +17,7 @@ function sc(arr){
 
   for (let ar of arr){
     for (let k of ar){
-      obj[k]=(obj[k]0)+1;
+      obj[k]=(obj[k]||0)+1;
     }
   }
   let max = 0;
@@ -43,7 +43,7 @@ function sc(arr){
       }
 
     }
-  }return arr;
+  }return arr; 
 }
 
 console.log(sc([[3,3,3,3,3,3,3,3,3]]))
