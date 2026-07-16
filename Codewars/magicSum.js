@@ -10,3 +10,4 @@ function uniqueSum(lst){
 
 console.log(uniqueSum([1,2,3]))
 console.log(uniqueSum([1,2,2,2,4,6,8,9,56,3]))
+
