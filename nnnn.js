@@ -1,15 +1,20 @@
-// function transformToObject(users){
+function transformToObject(users){
+    const result = {};
+    for (const user of users) {
+        const id = user.id;
+        const name = user.name.split(' ')[0];// Get the last name if it exists, otherwise get the first name
+        result[id] = name;
+    }
+    return result;
+}
+const users = [
+  { id: 1, name: 'Alicen' },
+  { id: 2, name: 'Bob marley' },
+  { id: 3, name: 'Charlie kirk' },
+];
 
-// z
-// }
-// const users = [
-//   { id: 1, name: 'Alicen' },
-//   { id: 2, name: 'Bob marley' },
-//   { id: 3, name: 'Charlie kirk' },
-// ];
-
-// const transformed = transformToObject(users);
-// console.log(transformed); // Output: { '1': 'Alice', '2': 'Bob', '3': 'Charlie' }
+const transformed = transformToObject(users);
+console.log(transformed); // Output: { '1': 'Alice', '2': 'Bob', '3': 'Charlie' }
 
 
 
@@ -34,5 +39,8 @@
 // for(let c=1;c<max;c++){
 // console.log(counter());
 // }
-let a =Symbol(1);
-console.log(typeof(a));
+
+
+
+// let a =Symbol(1);
+// console.log(typeof(a));

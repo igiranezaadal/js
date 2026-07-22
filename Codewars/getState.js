@@ -7,7 +7,6 @@ function getState(promise) {
 //     resolve("fulfilled");
 //   else if(promise)
 //     reject("rejected");
-    
 //   if(promise)
 //     return "pending"
 // });
@@ -29,5 +28,5 @@ function getState(promise) {
       }
     );
 }
-console.log(getState(Promise.resolve(1))); // "fulfilled"
-console.log(getState(Promise.reject(1))); // "rejected"
+console.log(getState(Promise)); // "fulfilled"
+console.log(getState(Promise.reject(2))); // "rejected"
