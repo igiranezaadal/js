@@ -1,0 +1,15 @@
+let a=1;let b=2;
+// console.log(a);
+setTimeout(()=>{
+    console.log('Timeout '+a);
+},100)
+
+a=10
+fetch('https://open.spotify.com/').then(()=>{
+    console.log("fetched successfully")
+    })
+
+
+console.log('synchronous code');
+console.log(a);
+console.log(b);

@@ -1,0 +1,14 @@
+//cant open file
+//loose connection over internet or server
+//type error 
+//inputing incorrect
+try{
+    console.lag('d');
+}
+
+catch(error){
+    console.log(error)
+}
+finally{
+    console.log('this always excutes')
+}
