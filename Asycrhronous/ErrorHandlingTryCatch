@@ -2,13 +2,26 @@
 //loose connection over internet or server
 //type error 
 //inputing incorrect
-try{
-    console.lag('d');
-}
+// try{
+//     console.lag('d');
+// }
 
-catch(error){
-    console.log(error)
-}
-finally{
-    console.log('this always excutes')
+// catch(error){
+//     console.log(error)
+// }
+// finally{
+//     console.log('this always excutes')
+// }
+
+
+
+async function getTimeline() {
+  try {
+    const user = await fetchUser(1);
+    const posts = await fetchPosts(user.id);
+    console.log(posts);
+    console.log("complete");
+  } catch (err) {
+    console.error(err);
+  }
 }
