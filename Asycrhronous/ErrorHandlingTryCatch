@@ -15,13 +15,13 @@
 
 
 
-async function getTimeline() {
-  try {
-    const user = await fetchUser(1);
-    const posts = await fetchPosts(user.id);
-    console.log(posts);
-    console.log("complete");
-  } catch (err) {
-    console.error(err);
-  }
-}
+// async function getTimeline() {
+//   try {
+//     const user = await fetchUser(1);
+//     const posts = await fetchPosts(user.id);
+//     console.log(posts);
+//     console.log("complete");
+//   } catch (err) {
+//     console.error(err);
+//   }
+// }

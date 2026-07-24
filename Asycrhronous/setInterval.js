@@ -7,7 +7,7 @@ const iterate = setInterval(() => {
   
   // Stop the interval after 3 iterations
   if (count === 3) {
-    clearInterval(iterate);
+    // clearInterval(iterate);
     console.log("Interval cleared");
   }
 }, 1000);
