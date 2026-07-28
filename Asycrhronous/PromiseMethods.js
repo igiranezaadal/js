@@ -3,12 +3,40 @@ const promise2=42
 const promise3=new Promise((resolve,reject)=>{
     setTimeout(resolve,100,"foo")
 })
+ async function geet(e){return e;}
 // console.log(promise1); // wrong way to display a promise
+
 // console.log(promise2);
-// console.log(promise3);
-Promise.all([promise1,promise2,promise3]).then((value)=>{
-    console.log(value);
-})
+console.log(typeof(resolve));
+console.log(typeof(geet));
+// Promise.all([promise1,promise2,promise3]).then((value)=>{
+//     console.log(value);
+// })
+
+
+// let resolve, reject;
+// const promise = new Promise((res, rej) => {
+//   resolve = res;
+//   reject = rej;
+// });
+
+
+// const { promise, resolve, reject } = Promise.withResolvers();
+// console.log(resolve)
+// console.log(reject)
+// console.log(promise)
+
+// const { promise, resolve } = Promise.withResolvers();
+// submitButton.addEventListener("click", () => {
+//   resolve("User clicked submit!");
+// });
+// const result = await promise;
 
 
 
+// console.log("Start");
+// setTimeout(() => {
+//     console.log("Hello");
+// }, 0);
+
+// console.log("End");
