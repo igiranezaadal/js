@@ -46,13 +46,19 @@
 // }
 // console.log(displayMessage());
 
-async function f() {
-    console.log('Async function.');
-    return Promise.resolve(1);
+// async function f() {
+//     console.log('Async function.');
+//     return Promise.resolve(1);
+// }
+// f();
+
+function doDishes(){
+    return new Promise((resolve)=>{
+        setTimeout()
+    });
 }
-f();
-
-
+function eatMore(){}
+function goggins(){}
 
 
 
