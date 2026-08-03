@@ -77,11 +77,49 @@
 
 
 
-console.log("Start");
+// console.log("Start");
 
-Promise.resolve().then(() => {
-    console.log("Promise");
-});
+// Promise.resolve().then(() => {
+//     console.log("Promise");
+// });
 
-// while (true) {}
-console.log("End");
+// // while (true) {}
+// console.log("End");
+
+// let success=false;
+// function tryagain(){
+//     console.log("try again")
+// }
+// for(let i=0;!success<5;i++){
+//  console.log(tryagain())
+//  if(1==10) break;
+// }
+
+
+// Promise.resolve(5)
+//   .then(num => {
+//     console.log("First adal:", num);
+//     return num * 2;
+//   })
+//   .then(num => {
+//     console.log("Second adal:", num);
+//     return num + 10;
+//   })
+//   .then(num => {
+//     console.log("Third adal:", num);
+//     return num / 3;
+//   })
+//   .then(result => {
+//     console.log("last adal.com:", result);
+//   });
+
+
+  function double(num) {
+  return Promise.resolve(num * 2);
+}
+
+Promise.resolve(5)
+  .then(double)             
+  .then(double)              
+  .then(double)             
+  .then(result => console.log(result));
