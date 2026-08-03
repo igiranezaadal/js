@@ -52,14 +52,57 @@
 // }
 // f();
 
-function doDishes(){
-    return new Promise((resolve)=>{
-        setTimeout()
-    });
+// function doDishes(){
+//     return new Promise((resolve)=>{
+//         setTimeout(()=>{
+//             console.log('good disk washer!');
+            
+//         },1000)
+//     });
+// }
+// function eatMore(){
+//     return new Promise((resolve)=>{
+//         setTimeout(()=>{
+//             console.log('eat eat eat!');
+            
+//         },2000)
+//     });
+// }
+// function goggins(){
+//     return new Promise((resolve)=>{
+//         setTimeout(()=>{
+//             console.log('stay hard!');
+            
+//         },3000)
+//     });
+// }
+//  async function te(){
+//     await doDishes();
+//     await eatMore();
+//     await goggins();
+//  }
+//  console.log(te);
+ 
+
+
+
+// Modern approach using Async/Await
+async function fetchUserData(userId) {
+  try {
+    // Execution pauses here until the network request completes
+    const response = await fetch(`https://example.com{userId}`);
+    
+    // Execution pauses here until JSON parsing completes
+    const data = await response.json(); 
+    
+    return data; 
+  } catch (error) {
+    // Handles any network or parsing errors cleanly
+    console.error("Failed to fetch data:", error);
+  }
 }
-function eatMore(){}
-function goggins(){}
 
-
-
+// Calling the function (remember, it returns a Promise)
+fetchUserData(1)
+  .then(user => console.log(user));
 
