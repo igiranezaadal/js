@@ -76,27 +76,37 @@
 
 // Error Hnadling in Asynchronous Functions with Error-First Callbacks
 // 1. Defining the asynchronous function
-function fetchUserData(userId, callback) {
-  setTimeout(() => {
-    if (!userId) {
-      // Pass the error as the first argument, result is omitted
-      return callback(new Error("User ID is required.")); 
-    }
+// function fetchUserData(userId, callback) {
+//   setTimeout(() => {
+//     if (!userId) {
+//       // Pass the error as the first argument, result is omitted
+//       return callback(new Error("User ID is required.")); 
+//     }
 
-    const mockUser = { id: userId, name: "Alex" };
-    // Pass null as the error argument, followed by the result data
-    callback(null, mockUser); 
-  }, 1000);
-}
+//     const mockUser = { id: userId, name: "Alex" };
+//     // Pass null as the error argument, followed by the result data
+//     callback(null, mockUser); 
+//   }, 1000);
+// }
 
-// 2. Consuming the function with an error-first callback
-fetchUserData(null, (err, data) => {
-  // Always check for the error first
+// // 2. Consuming the function with an error-first callback
+// fetchUserData(null, (err, data) => {
+//   // Always check for the error first
+//   if (err) {
+//     console.error("An error occurred:", err.message);
+//     return; // Exit early to prevent executing success logic
+//   }
+
+//   // Safe to process data here
+//   console.log("Success:", data.name);
+// });
+
+
+divideNumbers(10, 0, (err, result) => {
   if (err) {
     console.error("An error occurred:", err.message);
-    return; // Exit early to prevent executing success logic
+    return;
   }
 
-  // Safe to process data here
-  console.log("Success:", data.name);
+  console.log("Success! Result is:", result);
 });
