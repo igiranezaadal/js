@@ -82,7 +82,6 @@
 //       // Pass the error as the first argument, result is omitted
 //       return callback(new Error("User ID is required.")); 
 //     }
-
 //     const mockUser = { id: userId, name: "Alex" };
 //     // Pass null as the error argument, followed by the result data
 //     callback(null, mockUser); 
@@ -102,11 +101,80 @@
 // });
 
 
-divideNumbers(10, 0, (err, result) => {
-  if (err) {
-    console.error("An error occurred:", err.message);
-    return;
-  }
+// divideNumbers(10, 0, (err, result) => {
+//   if (err) {
+//     console.error("An error occurred:", err.message);
+//     return;
+//   }
 
-  console.log("Success! Result is:", result);
+//   console.log("Success! Result is:", result);
+// });
+
+
+// adalPromise = new Promise((resolve, reject) => {
+//   setTimeout(() => {
+//     resolve("Adal's promise resolved!");
+//   }, 3000);
+// });
+
+// mattPromise = new Promise((resolve, reject) => {
+//   setTimeout(() => {
+//     resolve("Matt's promise resolved!");
+//   }, 2000);
+// });
+
+// Promise.allSettled([adalPromise, mattPromise
+// ]);
+
+function fetchDataFromApi(){
+
+  return new Promise((resolve,reject)=>{
+    setTimeout(()=>{
+      const data = {result:"some data from api"};
+      resolve(data);
+    },1000);
+});
+}
+fetchDataFromApi()
+.then((data)=>{
+  console.log("user profile for UI",data.result);
+})
+
+
+
+
+function fetchDataFromApi(){
+  let resolve, reject;
+  return new Promise((resolve_, rej) => {
+    resolve = resolve_;
+    reject = rej;
+  });
+} 
+setTimeout(() => {
+  const data = {result:"some data from api"};
+  resolve(data);
+}, 1000);
+fetchDataFromApi()
+.then((data)=>{
+  console.log("user profile for UI",data.result);
+})
+
+
+
+
+let {promise, resolve, reject} = Promise.withResolvers();
+setTimeout(() => {
+  const data = {result:"some data from api"};
+  resolve(data);
+}, 1000);
+setTimeout(() => {
+  const error = new Error("Failed to fetch data from API");
+  reject(error);
+}, 1500);
+fetchDataFromApi()
+.then((data)=>{
+  console.log("user profile for UI",data.result);
+})
+.catch((error)=>{
+  console.error("Error fetching data:", error.message);
 });
