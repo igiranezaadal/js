@@ -144,7 +144,7 @@ fetchDataFromApi()
 
 
 function fetchDataFromApi(){
-  let resolve, reject;
+  let resolve,reject;
   return new Promise((resolve_, rej) => {
     resolve = resolve_;
     reject = rej;
@@ -167,6 +167,8 @@ setTimeout(() => {
   const data = {result:"some data from api"};
   resolve(data);
 }, 1000);
+
+
 setTimeout(() => {
   const error = new Error("Failed to fetch data from API");
   reject(error);
