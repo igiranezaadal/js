@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* background-color:hsl(50, 30%, 90%); */
+}
+.container{
+    margin: 50px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.conatiner .card{
+    padding: 15px;
+    background-repeat: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    position: relative;
+}
+
+.conatiner span{
+    position: relative;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50px);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    padding: 5px 20px;
+    border-radius: 5px;
+    font-size: 17px;
+}
+.card p:not(:last-child){
+    margin-top: 10px;
+}

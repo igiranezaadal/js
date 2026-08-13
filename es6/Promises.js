@@ -1,3 +1,4 @@
+
 // promises: is a built in object used to handle asychronous operation cleanly
 // Synchronous:  tasks happen one at a time and you must wait for one to finish before moving to the next. 
 // Asynchronous: tasks can happen independently, allowing a system to start a task and move on to others without waiting for the first to complete
@@ -11,3 +12,12 @@ const userData=new Promise((resolve,reject)=>{
 console.log(userData)
 console.log(userData.value)
 console.log(typeof(userData))
+
+
+// let map=new Map();
+// let set=new Set();
+// console.log(map);
+// console.log(set);
+// let test='dgdg';
+// let uncover=ecrypt(test)
+// console.log(uncover);
