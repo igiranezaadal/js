@@ -34,5 +34,5 @@ fetch('https://pokeapi.co/api/v2/pokemon/pikachu')
         }
         return response.json();
         })
-    .then(data => console.log(data.name))
+    .then(data => console.log(data.height))
     .catch(error =>console.error(error));
