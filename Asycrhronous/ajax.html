@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content=
+        "width=device-width, initial-scale=1.0">
+    <title>AJAX Async Requests</title>
+
+    <style>
+        body {
+            text-align: center;
+        }
+
+        h1 {
+            padding: 2px;
+            color: green;
+            font-size: 3rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+        }
+
+        div {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Project Adal</h1>
+    <h2>AJAX Asynchronous Requests</h2>
+    <div id="response"></div>
+    <button onclick="SendAsyncRequest()">Async Request</button>
+    <button onclick="SendSyncRequest()">Sync Request</button>
+
+    <script>
+        function SendAsyncRequest() {
+            document.getElementById('response').innerText = "";
+            var request = new XMLHttpRequest();
+            request.open('GET', 
+            'https://jsonplaceholder.typicode.com/todos/1', true);
+
+            request.onload = () => {
+                document.getElementById('response').innerText
+                    += "Response : \n" + request.responseText;
+            }
+            request.send();
+            document.getElementById('response').innerText
+                += "\n\n OTHER TASK EXECUTED\n\n";
+        }
+
+        function SendSyncRequest() {
+            document.getElementById('response').innerText = "";
+            var request = new XMLHttpRequest();
+            request.open('GET', 
+            'https://jsonplaceholder.typicode.com/todos/1', false);
+            request.onload = () => {
+                document.getElementById('response').innerText
+                    += "Response : \n" + request.responseText;
+            }
+            request.send();
+            document.getElementById('response').innerText
+                += "\n\n OTHER TASK EXECUTED\n\n";
+        }
+    </script>
+</body>
+
+</html>
