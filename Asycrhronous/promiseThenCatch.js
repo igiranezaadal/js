@@ -55,7 +55,8 @@ function cleanKitchen(){
             const kitchenCleaned=true
             if(kitchenCleaned)
                 resolve("clean the kitchen 🎂");
-            else reject("you did not clean the kitchen")
+            else 
+                reject("you did not clean the kitchen")
     },2500);
     })
     
@@ -63,7 +64,7 @@ function cleanKitchen(){
 function trash(){
     return new Promise((resolve,reject)=>{
         setTimeout(()=>{
-            const takeOut=false
+            const takeOut=true
             if(takeOut){
         resolve("take out trash");
             }
@@ -72,29 +73,10 @@ function trash(){
     })
     
 }
-
-// console.log(walkDog());
-// console.log(cleanKitchen());
-// console.log(trash());
-walkDog().then(value => {console.log(value); return cleanKitchen()})
+        walkDog()
+        .then(value => {console.log(value); return cleanKitchen()})
         .then(value=> {console.log(value); return trash()})
         .then(value=> {console.log(value); console.log("u finnished all the shores")})
         .catch(console.error)
         //debugg above code to work properly.
-let a=[1,2,3];
-a.forEach(element => {
-    console.log(element);
-});
 
-// async function FetchData() {
-//   // OMITTING AWAIT: returns a Promise object, NOT the actual data
-//   const data = fetch("https://instagram.com"); 
-//   console.log(data); // Logs: Promise { <pending> }
-//   return new Promise((resolve, reject) => {
-//     setTimeout(() => {
-//         if (data) {resolve("Data fetched successfully!");}
-//         else {reject("Error fetching data.");}
-//     }, 2000);
-// });
-// }
-FetchData(value => console.log(value));

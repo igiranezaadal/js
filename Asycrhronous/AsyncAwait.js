@@ -101,8 +101,22 @@ async function fetchUserData(userId) {
     console.error("Failed to fetch data:", error);
   }
 }
-
 // Calling the function (remember, it returns a Promise)
 fetchUserData(1)
   .then(user => console.log(user));
+
+
+
+  // async function FetchData() {
+//   // OMITTING AWAIT: returns a Promise object, NOT the actual data
+//   const data = fetch("https://instagram.com"); 
+//   console.log(data); // Logs: Promise { <pending> }
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//         if (data) {resolve("Data fetched successfully!");}
+//         else {reject("Error fetching data.");}
+//     }, 2000);
+// });
+// }
+// FetchData(value => console.log(value));
 

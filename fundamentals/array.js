@@ -64,3 +64,9 @@ const myGirls = ["Cecilie", "Lone"];
 const myBoys = ["Emil", "Tobias", "Linus"];
 
 const myChildren = myGirls.concat(myBoys);
+
+
+// let a=[1,2,3];
+// a.forEach(element => {
+//     console.log(element);
+// });
