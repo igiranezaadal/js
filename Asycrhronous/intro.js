@@ -119,7 +119,16 @@
 }
 
 Promise.resolve(5)
-  .then(double)             
-  .then(double)              
-  .then(double)             
+  .then(double)
+  .then(double)
+  .then(double)
   .then(result => console.log(result));
+
+
+  // Adal
+  // q1. what is Promise.withResolvers() amd what does it handle?  hint?(.race=first resolved(), .any()=first fullfilled(either resolve or reject))
+  // q2. what do u understand by the word Execution context
+  // q3. compare call stack to event looping
+  // q4. How does  a forEach() and map() or for...of behave with promises?
+  // q5. What is the difference between concurrency and parallelism programming paradigms?
+
