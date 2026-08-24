@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<head>
+  <title>Adal.com</title>
+</head>
+<body>
+<h1>JavaScript Fetch API</h1>
+<h2>Adal</h2>
+
+<p id="demo"></p>
+<p id="adal"></p>
+
+
+<script>
+async function loadText(file) {
+  const response = await fetch(file);
+  myDisplayer(response.url);
+}
+
+loadText("fetch.txt");
+
+function myDisplayer(text) {
+  document.getElementById("demo").innerHTML =  text;
+  document.getElementById("adal").innerHTML = 'ADAL is the Greatest Of All Time';
+}
+</script>
+
+</body>
+</html> 
