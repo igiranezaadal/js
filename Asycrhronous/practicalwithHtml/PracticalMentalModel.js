@@ -79,33 +79,11 @@ function runGraph(graph, concurrency) {
         graph.d.push(graph.c)
         console.log(typeof graph.d);
         console.log(Array.isArray(graph.d));
-
-
         console.log(`assiged concurrency of d ${graph.d}`);
-
-
-
-
-
     })
 }
-runGraph(graph,2)
 
-.then((data)=>{
-    console.log(data);
-    return data;
-
-})
-.then((data)=>{
-    // if (graph.a.deps.includes(item=>{data})){
-    //     console.log(true);
-
-    //     // return true;
-    // }
-    // else {
-    //     console.log(false);
-
-    // }
-    console.log(data);
-
-})
+runGraph(graph,2).then((data)=>{
+                    console.log(data);
+                    return data;
+                })
