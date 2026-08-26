@@ -28,15 +28,36 @@
 // console.log('end');
 
 
-let count = 0;
+// let count = 0;
 
-let interval = setInterval(function(){
-    count += 1;
-    if(count === 5){
-        clearInterval(interval);
-    }
-    let dateTime= new Date();
-    let time = dateTime.toLocaleTimeString();
-    console.log(time);
+// let interval = setInterval(function(){
+//     count += 1;
+//     if(count === 5){
+//         clearInterval(interval);
+//     }
+//     let dateTime= new Date();
+//     let time = dateTime.toLocaleTimeString();
+//     console.log(time);
 
-}, 2000);
+// }, 2000);
+
+
+console.log(1);
+setTimeout(() => { console.log(2);
+ new Promise((resolve) => { 
+ console.log(3); 
+	setTimeout(() => { 
+	console.log(4); 
+	resolve(5); 
+	 }, 0); 
+ })
+.then((val) => { 
+	console.log(val);
+	}); 
+console.log(6);
+}, 0);
+
+Promise.resolve().then(() => { console.log(7);
+});
+console.log(8);
+//1 8 7 2 3 6 4 5
