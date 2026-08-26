@@ -84,18 +84,44 @@
 //   }
 // }
 
-fetch('https://api.github.com/users')
-.then((response)=>{
-    if (!response.ok) {
-        throw new Error(`Status: ${response.status}`);}
-    else{
-        return response.json()
-    }})
-    .then((msg)=>{
-        console.log(msg[0]);
+// fetch('https://api.github.com/users')
+// .then((response)=>{
+//     if (!response.ok) {
+//         throw new Error(`Status: ${response.status}`);}
+//     else{
+//         return response.json()
+//     }})
+//     .then((msg)=>{
+//         console.log(msg[0]);
         
-    })
-    .catch((error)=>{
-        console.log(error);
+//     })
+//     .catch((error)=>{
+//         console.log(error);
         
-    })
+//     })
+
+
+
+const apiUrls = [
+  'https://jsonplaceholder.typicode.com/posts/4',
+  'https://jsonplaceholder.typicode.com/posts/5',
+  'https://jsonplaceholder.typicode.com/posts/6'
+];
+// Write a JavaScript function that fetches  data from multiple APIs concurrently and returns
+//  a combined result using Promises and 'Promise.all()'.
+
+let multiple=async()=>{
+    // let promise=new Promise(()=>{})
+    // let delay=setTimeout(()=>{
+    //     console.log('delayed display')
+    // })
+    return await fetch(apiUrls)
+    
+
+    // return new Promise((resolve,reject)=>{
+    //     console.log('starting promise');
+    // })
+}
+multiple().then((data)=>{
+    
+})

@@ -63,12 +63,26 @@
 // //1 8 7 2 3 6 4 5
 
 
-async function foo() {
-  console.log(1);
-  await null;
-  console.log(2);
-}
-console.log(3);
-foo();
-console.log(4);
-//3 1 4 2
+// async function foo() {
+//   console.log(1);
+//   await null;
+//   console.log(2);
+// }
+// console.log(3);
+// foo();
+// console.log(4);
+// //3 1 4 2
+
+
+
+console.log(1);
+queueMicrotask(() => console.log(2));
+Promise.resolve().then(() => {
+  console.log(3);
+  queueMicrotask(() => console.log(4));
+});
+Promise.resolve().then(() => console.log(5));
+console.log(6);
+// 162354
+
+
