@@ -1,0 +1,66 @@
+<!-- // 10. Create a button that counts clicks, but with a twist - after each click, the button should be disabled for 2 seconds while showing "Processing..." text. Once the delay is over, re-enable the button and show the updated count. This tests your ability to manage UI state during async operations triggered by user interactions.
+    
+//     **Requirements:**
+    
+//     - Button shows "Click me! Count: 0" initially
+//     - When clicked, immediately show "Processing..." and disable button
+//     - After 2 seconds, re-enable button and show new count
+//     - Handle multiple rapid clicks properly (they should queue or be ignored -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>count clicks</title>
+</head>
+<style>
+    body{
+        padding: 0;
+        margin: 0;
+    }
+    button{
+        border: 1px solid hsl(123, 73%, 40%);
+        border-radius: 10px;
+        background: hsl(125, 90%, 70%);
+        margin-top: 20px-        ;
+        /* margin: 15% 0px 20px 45%; */
+        /* width: 80px; */
+        /* height: 40px; */
+        padding: 10px;
+
+    }
+    button :hover{
+        transition: 1s;
+        background: hsl(125, 100%, 40%);
+        transform: scale(1.1);
+    }
+    button a{
+        text-decoration: none;
+        color: black;
+        font-weight: bold;
+        font-size: larger;
+    }
+    .txtLoad{
+        background: #000;
+    }
+</style>
+<body>
+    <button id="btn">click Me</button>
+    <p id="txtLoad"></p>
+<script>
+    let btn=document.getElementById('btn')
+    let txt=document.getElementById('txtLoad')
+    let count=0
+    btn.addEventListener('click',()=>{
+        // setTimeout(()=>{
+            count++;
+            txt.textContent = count;
+        // },1500);
+    })
+    
+
+</script>
+</body>
+</html>
+
