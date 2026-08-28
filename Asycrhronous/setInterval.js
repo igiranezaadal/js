@@ -27,15 +27,15 @@
 
 
 // Write a JavaScript program to implement a function that executes a given function repeatedly at a fixed interval using 'setInterval()'.
-let counter=1
-let times=setInterval(()=>{
-    console.log(`hello ${counter++} times`);
-    if(counter==6) {
-        clearInterval(times)   
-        console.log('Execution stopped.');
+// let counter=1
+// let times=setInterval(()=>{
+//     console.log(`hello ${counter++} times`);
+//     if(counter==6) {
+//         clearInterval(times)   
+//         console.log('Execution stopped.');
  
-    }
-},1000)
+//     }
+// },1000)
 
 
 
