@@ -3,25 +3,25 @@
 
 
 
-const originalUser = {
-  name: "Alice",
-  location: {
-    city: "New York",
-    country: "USA"
-  }
-};
+// const originalUser = {
+//   name: "Alice",
+//   location: {
+//     city: "New York",
+//     country: "USA"
+//   }
+// };
 
-// Creating a shallow copy using the spread operator
-const shallowCopy = { ...originalUser };
+// // Creating a shallow copy using the spread operator
+// const shallowCopy = { ...originalUser };
 
-// 1. Modifying a top-level property
-shallowCopy.name = "Bob"; 
+// // 1. Modifying a top-level property
+// shallowCopy.name = "Bob"; 
 
-// 2. Modifying a nested property
-shallowCopy.location.city = "Los Angeles";
+// // 2. Modifying a nested property
+// shallowCopy.location.city = "Los Angeles";
 
-console.log(originalUser.name);          // "Alice" (Unchanged ✅)
-console.log(originalUser.location.city); // "Los Angeles" (Changed! ❌ Shared reference)
+// console.log(originalUser.name);          // "Alice" (Unchanged ✅)
+// console.log(originalUser.location.city); // "Los Angeles" (Changed! ❌ Shared reference)
 
 
 
