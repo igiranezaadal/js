@@ -16,8 +16,10 @@
 </head>
 <style>
     body{
-        padding: 0;
-        margin: 0;
+        background: hsl(0, 0%, 99%);
+        padding: 0px;
+        margin-left: 50px;
+        margin-top: 50px;
     }
     button{
         border: 1px solid hsl(123, 73%, 40%);
@@ -30,6 +32,7 @@
         padding: 10px;
 
     }
+    
     button :hover{
         transition: 1s;
         background: hsl(125, 100%, 40%);
@@ -49,6 +52,8 @@
     <button id="btn">click Me</button>
     <p id="txtLoad"></p>
 <script>
+console.error(error);
+
     let btn=document.getElementById('btn')
     let txt=document.getElementById('txtLoad')
     let count=0

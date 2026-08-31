@@ -120,3 +120,23 @@ fetchUserData(1)
 // }
 // FetchData(value => console.log(value));
 
+
+
+//wakeRequest('Facebook').then(response =>
+//console.log('Response Received')
+return processRequest(response)
+//)).then(processedResponse => (
+// console.log(processedResponse)
+//]).catch(err => [
+// console.log(err)
+async function dowork() {
+try {
+const response = await makeRequest("Facebook")
+console.log('Response Received')
+const processedResponse = await processRequest(response)
+console.log(processedResponse)
+} catch (err) {
+console.log(err)
+dowork()
+}
+}
