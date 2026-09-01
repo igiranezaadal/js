@@ -15,7 +15,7 @@
     <title>count clicks</title>
 </head>
 <style>
-    body{
+    /* body{
         background: hsl(0, 0%, 99%);
         padding: 0px;
         margin-left: 50px;
@@ -26,9 +26,7 @@
         border-radius: 10px;
         background: hsl(125, 90%, 70%);
         margin-top: 20px-        ;
-        /* margin: 15% 0px 20px 45%; */
-        /* width: 80px; */
-        /* height: 40px; */
+        margin: 15% 0px 20px 45%; 
         padding: 10px;
 
     }
@@ -46,26 +44,65 @@
     }
     .txtLoad{
         background: #000;
+    } */
+
+
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
     }
+    button:disabled {
+      cursor: not-allowed;
+      opacity: .6;
+    }
+    
 </style>
 <body>
-    <button id="btn">click Me</button>
-    <p id="txtLoad"></p>
-<script>
-console.error(error);
+    <!-- <button id="btn">click Me</button>
+    <p id="txtLoad"></p> -->
 
-    let btn=document.getElementById('btn')
-    let txt=document.getElementById('txtLoad')
-    let count=0
-    btn.addEventListener('click',()=>{
-        // setTimeout(()=>{
-            count++;
-            txt.textContent = count;
-        // },1500);
-    })
+
+
+  <button id="counterBtn">Click me! Count: 0</button>
+
+<script>
+    // console.error(error);
+
+    // let btn=document.getElementById('btn')
+    // let txt=document.getElementById('txtLoad')
+    // let count=0
+    // btn.addEventListener('click',()=>{
+    //     // setTimeout(()=>{
+    //         count++;
+    //         txt.textContent = count;
+    //     // },1500);
+    // })
     
+
+
+
+
+    let count = 0;
+    let isProcessing = false;
+    const button = document.getElementById('counterBtn');
+
+    button.addEventListener('click', async () => {
+    //   if (isProcessing) return;
+
+      isProcessing = true;
+      button.disabled = true;
+      button.textContent = ' Processing...';
+      let delay= await new Promise(resolve => setTimeout(resolve, 2000));
+      console.log(delay);
+
+      count++;
+      button.textContent = `Click me! Count: ${count}`;
+      button.disabled = false;
+      isProcessing = false;
+    });
 
 </script>
 </body>
-</html>
-
+</html> 
