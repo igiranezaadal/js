@@ -75,14 +75,21 @@
 
 
 
-console.log(1);
-queueMicrotask(() => console.log(2));
-Promise.resolve().then(() => {
-  console.log(3);
-  queueMicrotask(() => console.log(4));
-});
-Promise.resolve().then(() => console.log(5));
-console.log(6);
-// 162354
+// console.log(1);
+// queueMicrotask(() => console.log(2));
+// Promise.resolve().then(() => {
+//   console.log(3);
+//   queueMicrotask(() => console.log(4));
+// });
+// Promise.resolve().then(() => console.log(5));
+// console.log(6);
+// // 162354
 
 
+console.log(" I ");
+console.log(" eat ");
+setTimeout(() => {
+  console.log(" ice cream 🍨");
+}, 4000);
+console.log(" with a ");
+console.log(" spoon. ");
