@@ -114,21 +114,41 @@
 //   });
 
 
-  function double(num) {
-  return Promise.resolve(num * 2);
+//   function double(num) {
+//   return Promise.resolve(num * 2);
+// }
+
+// Promise.resolve(5)
+//   .then(double)
+//   .then(double)
+//   .then(double)
+//   .then(result => console.log(result));
+
+
+//   // Adal
+//   // q1. what is Promise.withResolvers() amd what does it handle?  hint?(.race=first resolved(), .any()=first fullfilled(either resolve or reject))
+//   // q2. what do u understand by the word Execution context
+//   // q3. compare call stack to event looping
+//   // q4. How does  a forEach() and map() or for...of behave with promises?
+//   // q5. What is the difference between concurrency and parallelism programming paradigms?
+
+
+
+// 1. Global Execution Context is created.
+// 2. Variable Environment registers 'globalMessage' and 'firstTask'.
+const globalMessage ="Main thread item";
+function firstTask() {
+// 3. Pushed to Call Stack. New Function Context & Variable Environment created.
+const localMessage ="Inside function";
+  console.log(localMessage);
+  // 4. Handed off to browser API. Timer starts in background.
+  setTimeout(() => {
+  // 7. Event Loop pushes this here *only* after Step 6 is done.
+    console.log("Async callback executed!");
+  },0);
+  // 5. Pops off the Call Stack.
 }
-
-Promise.resolve(5)
-  .then(double)
-  .then(double)
-  .then(double)
-  .then(result => console.log(result));
-
-
-  // Adal
-  // q1. what is Promise.withResolvers() amd what does it handle?  hint?(.race=first resolved(), .any()=first fullfilled(either resolve or reject))
-  // q2. what do u understand by the word Execution context
-  // q3. compare call stack to event looping
-  // q4. How does  a forEach() and map() or for...of behave with promises?
-  // q5. What is the difference between concurrency and parallelism programming paradigms?
-
+firstTask();
+// Invokes the function stack trace
+console.log(globalMessage);
+// 6. Runs immediately. Call Stack is now completely
