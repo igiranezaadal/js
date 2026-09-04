@@ -55,3 +55,24 @@
 // setTimeout(() => {
 //   stopExecution();
 // }, 4000);
+
+
+
+// Write a JavaScript program to implement a function that executes a 
+// given function repeatedly at a fixed interval using 'setInterval()'.
+let counter=1
+function students(){
+
+    let repeat=setInterval(()=>{
+        //function
+        function names(){
+            console.log(`name ${counter++}`)
+        }
+        if(counter==3){
+            clearInterval(repeat)
+        }
+        names()
+    },1000);
+    //end inteval
+}
+students()
