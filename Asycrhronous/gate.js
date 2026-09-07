@@ -31,34 +31,63 @@
 
 
 
+// const urls = [
+//   "https://invalid.example.com/users",
+//   "https://jsonplaceholder.typicode.com/users/1",
+//   "https://jsonplaceholder.typicode.com/users/2"
+// ];
+
+// async function getFirstAvailableUser(){
+//     try{
+//         let response=await fetch(urls)
+//         if(!response){
+//             throw new Error("can't fetch lite now");
+            
+//         }
+//         // let data=
+//         // for(let c of urls){
+//         //     c
+//         // }
+//         // let [d1,d2,d3]=urls
+//         // let data=Promise.race([d1,d2,d3])
+//         let data=Promise.any([response])
+//         return data
+//     }
+//     catch(error){
+//         console.log(`hhhh${error}`)
+//     }
+
+// }
+// getFirstAvailableUser();
+
+
+
+// correction
+
 const urls = [
   "https://invalid.example.com/users",
   "https://jsonplaceholder.typicode.com/users/1",
   "https://jsonplaceholder.typicode.com/users/2"
 ];
 
-async function getFirstAvailableUser(){
-    try{
-        let response=await fetch(urls)
-        if(!response){
-            throw new Error("can't fetch lite now");
-            
-        }
-        // let data=
-        // for(let c of urls){
-        //     c
-        // }
-        // let [d1,d2,d3]=urls
-        // let data=Promise.race([d1,d2,d3])
-        let data=Promise.any([response])
-        return data
-    }
-    catch(error){
-        console.log(`hhhh${error}`)
-    }
-
+async function fetchUser(url) {
+  const response = await fetch(url);
+  
+  if (!response.ok) {
+    throw new Error(`HTTP error! Status: ${response.status}`);
+  }
+  
+  return await response.json();
 }
-getFirstAvailableUser();
+async function getFirstAvailableUser() {
+  for (const url of urls) {
+    try {
+      const data = await fetchUser(url);
+      console.log("Success:", data);
+      return data;
+    } catch (error) {
+    }
+  }
 
-
-// console.log();
+  console.log("All servers failed");
+}
