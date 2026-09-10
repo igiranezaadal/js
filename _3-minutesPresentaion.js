@@ -11,6 +11,7 @@
 // //delayed
 
 
+
 // let timer=setTimeout(()=>{
 //     console.log(`hello timer`)
 // },1000)
