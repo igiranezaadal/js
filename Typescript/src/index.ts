@@ -1,6 +1,6 @@
 // const message: string = "TypeScript setup is working perfectly!";
 // console.log(message);
-console.log('hello Adal');
+// console.log('hello Adal');
 
 
 // codewars
@@ -35,7 +35,11 @@ console.log('hello Adal');
 // console.log(descendingOrder(12345));
 
 
-function repeatStr (n:number, s:String):String {
-  return s.repeat(n);
-}
-console.log(repeatStr(6, 'r'));
+// function repeatStr (n:number, s:String):String {
+//   return s.repeat(n);
+// }
+// console.log(repeatStr(6, 'r'));
+
+let address: string | number =6767
+console.log(address);
+
