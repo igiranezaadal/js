@@ -40,6 +40,9 @@
 // }
 // console.log(repeatStr(6, 'r'));
 
-let address: string | number =6767
-console.log(address);
+
+//  function stringToNumber(str: string): number {
+//   return Number(str);
+// }
+// console.log(stringToNumber("43"));
 
