@@ -42,18 +42,23 @@ function log():void{
 }
 log()
 
-// Enum(enumeration ): is collection of reelated values that can be numeric or string
-// enum  color {red, green, blue}
-// let c: color=color.green
-// console.log(c);
+// Enum(enumeration ): is collection of related values that can be numeric or string
+enum color {red, green, blue};
+let c: color=color.green
+console.log(c);
  
 // any : is supertype of all datatypes in TypeScript
-let someThing: any =adal 
-console.log(someThing);
+// let someThing: any =adal 
+// console.log(someThing);
 
-// type vs interface
-type User={ name: string}
-let user: User ={name: "type in TS"}
-console.log(user);
-// type annotation: is basically giving type to the variable in TypeScript
+// // type vs interface
+// type User={ name: string}
+// let user: User ={name: "type in TS"}
+// console.log(user);
+// // type annotation: is basically giving type to the variable in TypeScript
 
+// // never:
+// function funcName(): never{
+//    // it throws an exception or never returns
+// }
+// console.log(funcName);
