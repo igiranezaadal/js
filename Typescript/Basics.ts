@@ -19,33 +19,33 @@
 // console.log(employee);
 
 // Symbol
-const unique_key=Symbol();
-let obj={
-    [unique_key]: "secretValue"
-}
-// console.log(obj)
-// console.log(obj[unique_key])
-// console.log('testing');
+// const unique_key=Symbol();
+// let obj={
+//     [unique_key]: "secretValue"
+// }
+// // console.log(obj)
+// // console.log(obj[unique_key])
+// // console.log('testing');
 
-// null undefined
-let empty: null=null
-let ud: undefined
-console.log(empty)
-console.log(ud)
-// object
-let adal:object ={ name: 'bob' }
-// console.log(adal);
-// function void
-function log():void{
-    console.log('log');
-    // return 'return'
-}
-log()
+// // null undefined
+// let empty: null=null
+// let ud: undefined
+// console.log(empty)
+// console.log(ud)
+// // object
+// let adal:object ={ name: 'bob' }
+// // console.log(adal);
+// // function void
+// function log():void{
+//     console.log('log');
+//     // return 'return'
+// }
+// log()
 
-// Enum(enumeration ): is collection of related values that can be numeric or string
-enum color {red, green, blue};
-let c: color=color.green
-console.log(c);
+// // Enum(enumeration ): is collection of related values that can be numeric or string
+// enum color {red, green, blue};
+// let c: color=color.green
+// console.log(c);
  
 // any : is supertype of all datatypes in TypeScript
 // let someThing: any =adal 
@@ -71,13 +71,13 @@ console.log(c);
 // }
 
 
-let age: number = 17;
-if (age >= 18) {
-    console.log("You care eligible for voting.");
-}
-else {
-    console.log("You are not eligible for voting.")
-}
+// let age: number = 17;
+// if (age >= 18) {
+//     console.log("You care eligible for voting.");
+// }
+// else {
+//     console.log("You are not eligible for voting.")
+// }
 
 
 // var grade = 85;
@@ -94,22 +94,22 @@ else {
 // }
 
 
-var grade: string = 'B';
-switch (grade) {
-    case 'A': {
-        console.log("Excellent");
-        break;
-    }
-    case 'B': {
-        console.log("Good");
-        break;
-    }
-    case 'C': {
-        console.log("Fair");
-        break;
-    }
-    default: console.log("Unknown grade");
-}
+// var grade: string = 'B';
+// switch (grade) {
+//     case 'A': {
+//         console.log("Excellent");
+//         break;
+//     }
+//     case 'B': {
+//         console.log("Good");
+//         break;
+//     }
+//     case 'C': {
+//         console.log("Fair");
+//         break;
+//     }
+//     default: console.log("Unknown grade");
+// }
 
 
 
@@ -152,12 +152,46 @@ switch (grade) {
 // addNumbers(10,10,10,10,10)
 
 
-function disp_details(id:number,name:string,mail_id?:string) { 
-   console.log("ID:", id); 
-   console.log("Name",name); 
+// function disp_details(id:number,name:string,mail_id?:string) { 
+//    console.log("ID:", id); 
+//    console.log("Name",name); 
    
-   if(mail_id!=undefined)  
-   console.log("Email Id",mail_id); 
+//    if(mail_id!=undefined)  
+//    console.log("Email Id",mail_id); 
+// }
+// disp_details(123,"John");
+// disp_details(111,"mary","mary@xyz.com");
+
+
+// Defining the type alias
+type UserID = number;
+let user1: UserID = 101;
+console.log(user1+'\n')
+
+// union
+type StringOrNumber = string | number;
+function logMessage(message: StringOrNumber): void {
+    console.log(message);
 }
-disp_details(123,"John");
-disp_details(111,"mary","mary@xyz.com");
+logMessage("Hello");
+logMessage(123);
+// arrays
+type RGBColor = [number, number, number];
+let red: RGBColor = [255, 0, 0];
+console.log(`Red color: ${red}`);
+
+
+type User= {
+    id: string;
+    name: string;
+};
+let user :User={id:'101',name:'Adal'}
+console.log(user);
+
+// generics
+type Container<T>={value: T}
+let numberContainer: Container<number>={ value: 123 }
+let stringContainer: Container<string>={ value: "hello Adal" }
+console.log(numberContainer);
+console.log(stringContainer);
+// console.log(`${numberContainer}\n${stringContainer}\n`);
