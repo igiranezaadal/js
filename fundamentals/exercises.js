@@ -18,8 +18,6 @@
 
 
 
-
-
 // let myObject = { oldKey: "some data" };
 // myObject["newKey"] = myObject["oldKey"];
 // delete myObject["oldKey"];

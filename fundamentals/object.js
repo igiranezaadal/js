@@ -4,3 +4,4 @@ const person = new Object({
   age: 50,
   eyeColor: "blue"
 });
+console.log(person)
