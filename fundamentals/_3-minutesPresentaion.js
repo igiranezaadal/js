@@ -47,3 +47,7 @@ for (var i = 1; i <= 3; i++) {
   }, 100);
 }
 console.log("Loop finished!");
+// Loop finished!
+// 4
+// 4
+// 4
