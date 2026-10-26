@@ -1,3 +1,5 @@
+// https://www.codewars.com/kata/5817e09e628854ed390004cb/train/javascript
+// link: https://www.codewars.com/kata/5817e09e628854ed390004cb/train/javascript
 let obj = {
     a:['4', '@'],
     b : ['|3', '8'],
