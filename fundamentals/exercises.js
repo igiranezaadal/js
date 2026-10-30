@@ -44,15 +44,20 @@
 // console.log(typeof(a));
 
 
-// partern
-let n=10,pat="";
-for(let i=1;i<=n;i++){
-    for(let j=1;j<=n-i;j++){
-        pat+=" "
-    }
-    for(let j=1;j<=i;j++){
-        pat+="* "
-    }
-    pat+='\n';
-}
-console.log(pat);
+partern
+// let n=10,pat="";
+// for(let i=1;i<=n;i++){
+//     for(let j=1;j<=n-i;j++){
+//         pat+=" "
+//     }
+//     for(let j=1;j<=i;j++){
+//         pat+="* "
+//     }
+//     pat+='\n';
+// }
+// console.log(pat);
+
+
+let x = [1,2,3]
+x[5]=6
+console.log(x.length);
