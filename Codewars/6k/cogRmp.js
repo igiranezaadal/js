@@ -1,3 +1,5 @@
+// link
+// https://www.codewars.com/kata/59e1b9ce7997cbecb9000014/train/javascript
 // Kata Task
 // You are given a list of cogs in a gear train
 
@@ -28,3 +30,13 @@ function cogRmp(cogs) {
 console.log(cogRmp([100,75])); //output: -1.3333333333333333
 console.log(cogRmp([100,75,50])); //output: 2.6666666666666665
 console.log(cogRmp([100,75,50,25])); //output: -5.333333333333333
+
+
+
+// • Output RPM Formula:
+// \(\text{Output\ RPM}=\frac{\text{Input\ RPM}}{\text{Gear\ Ratio}}\)
+// (Or equivalently: \(\text{Output RPM} = \text{Input RPM} \times \left(\frac{\text{Teeth on Driver Gear}}{\text{Teeth on Driven Gear}}\right)\))
+// • Input RPM Formula:
+// \(\text{Input\ RPM}=\text{Output\ RPM}\times \text{Gear\ Ratio}\)
+// • Gear Ratio Formula:
+// \(\text{Gear\ Ratio}=\frac{\text{Teeth\ on\ Driven\ Gear}}{\text{Teeth\ on\ Driver\ Gear}}=\frac{\text{Input\ RPM}}{\text{Output\ RPM}}\)
