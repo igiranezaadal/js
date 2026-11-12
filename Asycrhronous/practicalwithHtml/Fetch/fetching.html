@@ -1,6 +1,13 @@
 <html>
    <head>
       <title>Launch Status</title>
+   </head>
+   <body>
+      <h1>Launch Status</h1>
+      <h3>Weather Conditions</h3>
+      <div id="weather-conditions">
+         {/* TODO: dynamically add html about weather using data from API */}
+      </div>
       <script>
          window.addEventListener("load", function() {
             fetch("https://handlers.education.launchcode.org/static/weather.json")
@@ -18,12 +25,5 @@
             // });
          });
       </script>
-   </head>
-   <body>
-      <h1>Launch Status</h1>
-      <h3>Weather Conditions</h3>
-      <div id="weather-conditions">
-         {/* TODO: dynamically add html about weather using data from API */}
-      </div>
    </body>
 </html>
