@@ -1,25 +1,29 @@
-var wordCounter = function(text) {
-  // TODO - Add your implementation here
-  //   return text;
-  let count=0;
-  
-  var cleanText = "";
-  for (var i = 0; i < text.length; i++) {
-    var char = text[i];
-    if (char === "," || char === ".") {
-      cleanText += " ";
-    } else {
-      cleanText += char;
+const wordCounter = function(text) {
+  const counts = new Map();
+
+  if (typeof text === "string" && text.length > 0) {
+    let cleanText = "";
+    for (let i = 0; i < text.length; i++) {
+      const char = text[i];
+      if (char === "," || char === ".") {
+        cleanText += " ";
+      } else {
+        cleanText += char;
+      }
+    }
+
+    const words = cleanText.split(/\s+/);
+    for (let j = 0; j < words.length; j++) {
+      const word = words[j];
+      if (word.length > 0) {
+        counts.set(word, (counts.get(word) || 0) + 1);
+      }
     }
   }
-  
-  let word=text.split(' ');
-  for(let i=0; i<word.length; i++){
-    for(let j=1; j<word.length; j++){
-      if(i==j)
-        count++;
-        continue;
+
+  return {
+    count: function(word) {
+      return counts.get(word) || 0;
     }
-  }
-  return count;
+  };
 };
